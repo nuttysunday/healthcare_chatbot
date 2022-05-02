@@ -1,3 +1,4 @@
 pandas
-dataset_link : ""
-tensorflow
+numpy
+seaborn
+sklearn
