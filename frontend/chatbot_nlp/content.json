@@ -69,7 +69,7 @@
         "tag":"tiggerwords",
       "input":["i think i am sick","i'am not feeling well","i am ill","i think i am unwell","not well"],
         "responses":[
-            "Tell me about your symptoms"
+            ""
           ]
       }
     ]
