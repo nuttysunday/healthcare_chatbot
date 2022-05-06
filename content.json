@@ -1,0 +1,76 @@
+{"intents":
+    [
+      {
+        "tag":"greeting",
+        "input":["hello","hi there","nice to meet you","hi","hey there","hey","hi there","hi, nice to meet you","hello there","anyone there ?","hello bot","knock knock"],
+        "responses":[
+            "Hey yo, do you need help ?",
+            "welcome aboard, how may I help you ?",
+            "ahoy!!",
+            "Hi random person, what do'ya want ?",
+            "Hello my friend, How can I help you ?",
+            "Ha , Glad you showed up. How are you ?"
+          ]
+      },
+      {
+        "tag":"goodbye",
+        "input":["Thank you","Thanks","Thanks for the info","bye","byr bro","adios","okay bye","goodbye","see you later","i will catch you later","i will catch up later","okay i will see you later","I will talk to you later","will text you later","bye bro, I'll talk to you later","Bye brother"],
+        "responses":[
+            "Okay, Bye",
+            "Have a nice day",
+            "Adios",
+            "Goodbye",
+            "see you later",
+            "nice conversation. bye",
+            "okay. Have a nice day",
+            "Take care",
+            "we'll meet soon",
+            "Yeah Sure, Will talk to you later",
+            "Okay , Take care"
+          ]
+      },
+      {
+        "tag":"howami",
+        "input":["how are you ?","I am fine , how are you ?","are you fine ?","how are things going on ?","everything going on okay ?","how's everything there ?","how's everything going on ?","is everything okay ?"],
+        "responses":[
+            "Yeah , am fine",
+            "Everything's going on well",
+            "Doing good.Thanks you are my best friend",
+            "Things are Great",
+            "Yeah Fine, nothing much going on in my life",
+            "I am Great , wanna join the bot's organization ?",
+            "Everything's great.",
+            "I am doing good. Life is boring. need to go on an adventure"
+          ]
+      },
+      {
+        "tag":"whoareyou",
+      "input":["who are you ?","what are you ?","what is your name ?","are you a chatbot ?","what can I call you ?","your name ?","are you a bot ?","how do I address you ?","How do I call you"],
+        "responses":[
+            "I am a The Great Health Care Bot , you can call me SunBot",
+            "I am SunBot and you could ask me questions about our organization",
+            "SunBot at your service",
+            "My name is SunBot and yes, I am the G.O.A.T",
+            "You can call me Sunbot and I am here to Help you",
+            "My name is Sunbot and I am here to answer your questions regarding our organization. go ahead and shoot"
+          ]
+      },
+      {
+        "tag":"whereareyou",
+      "input":["where are you from ?","which country are you from ?","where do you live ?","where are you ?","where do you live in ?","which place do you live in ?","where are you currently at","where do you live currently ?","you are from where","you are from ?"],
+        "responses":[
+            "I Live in the Internet",
+            "I am setting sail to the hospital",
+            "I live in Neural Network! Pretty sure you wouldn't have heard about that",
+            "Neural Network! That's where I live"
+          ]
+      },
+      {
+        "tag":"tiggerwords",
+      "input":["i think i am sick","i'am not feeling well","i am ill","i think i am unwell","not well"],
+        "responses":[
+            ""
+          ]
+      }
+    ]
+  }
