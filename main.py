@@ -30,10 +30,10 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 #response = urllib.request.urlopen(url)
 #data1 = json.loads(response.read())
 #importing the dataset
-dir_name = os.path.abspath(os.path.dirname('main.py'))
-location = os.path.join(dir_name, 'content.json')
-with open(location) as content:
-  data1 = json.load(content)
+#dir_name = os.path.abspath(os.path.dirname('main.py'))
+#location = os.path.join(dir_name, 'content.json')
+with open('content.json') as content:
+    data1 = json.load(content)
 # getting all the data to lists
 tags = []
 inputs = []
@@ -47,9 +47,9 @@ for intent in data1['intents']:
 data = pd.DataFrame({"inputs": inputs,
                      "tags": tags})
 
-dir_name = os.path.abspath(os.path.dirname('main.py'))
-location = os.path.join(dir_name, 'frontend/chatbot_nlp/my_model')
-model = tf.keras.models.load_model('location')
+#dir_name = os.path.abspath(os.path.dirname('main.py'))
+#location = os.path.join(dir_name, 'frontend/chatbot_nlp/my_model')
+model = tf.keras.models.load_model('my_model')
 tokenizer = Tokenizer(num_words=2000)
 
 # removing punctuations
