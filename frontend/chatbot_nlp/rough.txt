@@ -22,3 +22,16 @@ with col1:
 if user_input != "":
     with col1:
         message(random.choice(response)) 
+
+Dracs:
+[theme]
+primaryColor="#bd93f9"
+backgroundColor="#282a36"
+secondaryBackgroundColor="#44475a"
+textColor="#f8f8f2"
+my:
+[theme]
+primaryColor="#b1a4de"
+backgroundColor="#a8eadc"
+secondaryBackgroundColor="#e8e3e8"
+textColor="#000000"
