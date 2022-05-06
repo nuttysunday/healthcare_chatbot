@@ -4,6 +4,7 @@ import pickle
 import random
 import string
 import urllib
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -25,9 +26,14 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 #with open('content.json') as content:
 #   data1 = json.load(content)
 
-url = "https://jsonkeeper.com/b/OBM5"
-response = urllib.request.urlopen(url)
-data1 = json.loads(response.read())
+#url = "https://jsonkeeper.com/b/OBM5"
+#response = urllib.request.urlopen(url)
+#data1 = json.loads(response.read())
+#importing the dataset
+dir_name = os.path.abspath(os.path.dirname('main.py'))
+location = os.path.join(dir_name, 'content.json')
+with open(location) as content:
+  data1 = json.load(content)
 # getting all the data to lists
 tags = []
 inputs = []
