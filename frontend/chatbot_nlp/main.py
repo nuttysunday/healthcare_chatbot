@@ -22,9 +22,12 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 
 
 # importing the dataset
-with open('content.json') as content:
-    data1 = json.load(content)
+#with open('content.json') as content:
+#   data1 = json.load(content)
 
+url = "https://jsonkeeper.com/b/OBM5"
+response = urllib.request.urlopen(url)
+data1 = json.loads(response.read())
 # getting all the data to lists
 tags = []
 inputs = []
