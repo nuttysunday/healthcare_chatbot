@@ -3,7 +3,7 @@ import json
 import pickle
 import random
 import string
-
+import urllib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -20,9 +20,11 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 
+
 # importing the dataset
 with open('content.json') as content:
     data1 = json.load(content)
+
 # getting all the data to lists
 tags = []
 inputs = []
@@ -54,15 +56,17 @@ train = tokenizer.texts_to_sequences(data['inputs'])
 x_train = pad_sequences(train)
 input_shape = x_train.shape[1]
 
-df = pd.read_csv(
-    '/home/sunday/Coding/healthcare_chatbot/frontend/chatbot_nlp/Symptom-severity.csv')
+url = 'https://drive.google.com/file/d/1-zyO_hWGYLruIuskGQX-vpwU8LgzEmhO/view?usp=sharing'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df = pd.read_csv(path)
 
 list = df['Symptom'].tolist()
 
 
 def disease_prediction(symptoms):
-    df1 = pd.read_csv(
-        "/home/sunday/Coding/healthcare_chatbot/backend/disease_prediction/dataset/Symptom-severity.csv")
+    url = 'https://drive.google.com/file/d/1-zyO_hWGYLruIuskGQX-vpwU8LgzEmhO/view?usp=sharing'
+    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+    df1 = pd.read_csv(path)
     columns = ['Symptom_1', 'Symptom_2', 'Symptom_3', 'Symptom_4',
                'Symptom_5', 'Symptom_6', 'Symptom_7', 'Symptom_8', 'Symptom_9',
                'Symptom_10', 'Symptom_11', 'Symptom_12', 'Symptom_13', 'Symptom_14',
@@ -108,13 +112,18 @@ def disease_prediction(symptoms):
 
 
 def disease_analysis(pred):
-    df = pd.read_csv(
-        '/home/sunday/Coding/healthcare_chatbot/frontend/chatbot_nlp/disease_Description.csv')
+    url = 'https://drive.google.com/file/d/1vHqJum4ea7LP6bPgiXJGxW4-J2HgyM3R/view?usp=sharing'
+    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+    df = pd.read_csv(path)
+
     disease_description = df[df['Disease'] == pred]['Description']
     st.subheader('Disease description:')
     st.write(disease_description.values[0])
-    df1 = pd.read_csv(
-        '/home/sunday/Coding/healthcare_chatbot/frontend/chatbot_nlp/disease_precaution.csv')
+
+    url = 'https://drive.google.com/file/d/1Ne1Be5y4im4wk7FRmBukrDp2iDwnPH42/view?usp=sharing'
+    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+    df1 = pd.read_csv(path)
+
     disease_precaution = df1[df1['Disease'] == pred]
     disease_precaution.dropna(axis=1,inplace=True)
     disease_precaution = disease_precaution.iloc[0].to_numpy()[1:]
